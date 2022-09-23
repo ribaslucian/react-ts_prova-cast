@@ -29,6 +29,9 @@ Lembre de apagar node_modules baixados por outros sistemas operacionais.
 `https://gitlab.com/ribaslucian/react-ts_prova-cast`
 Pages: https://ribaslucian.gitlab.io/react-ts_prova-cast
 
+##### 6. Extras:
+Rodar servidor json: `json-server --watch db.json`
+
 <hr/>
 
 ##### Enunciado:
