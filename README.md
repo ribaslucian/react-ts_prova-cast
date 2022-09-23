@@ -19,11 +19,15 @@
 ##### 4. Enviar imagem para registry:
 `docker push ribaslucian/rl-npm:latest`
 
+##### 5. Pipelina completa no gitlab.
+`https://gitlab.com/ribaslucian/react-ts_prova-cast`
+Pages: https://ribaslucian.gitlab.io/react-ts_prova-cast
+
 <hr/>
 
 ##### Enunciado:
 1. [ok] Crie um projeto React com template typescript.
-2. Versione o projeto no Gitlab do sebrae e crie a estrutura de desenvolvimento e branches baseadas no gitflow.
+2. [ok] Versione o projeto no Gitlab do sebrae e crie a estrutura de desenvolvimento e branches baseadas no gitflow.
 3. Implemente uma tabela com duas linhas e duas colunas. Ela precisa ser responsiva e tableless.
 4. Crie uma chamada para o serviço http://viacep.com.br/ws/01001000/json/ utilizando a biblioteca AXIOS e disponibilize o resultadoi da chamada em uma tela.
 5. Desenvolva um CRUD utilizando o JSON "Conta". O JSON precisa ter apenas os atributos: nome e descrição. Os dados podem ser mantidos no browser.
