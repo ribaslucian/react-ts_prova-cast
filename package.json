@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.6",
+    "@mui/x-data-grid": "^5.17.4",
     "@sitespeed.io/chromedriver": "^105.0.5195-19",
     "axios": "^0.27.2",
     "react": "^18.2.0",
