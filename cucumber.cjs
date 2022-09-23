@@ -2,8 +2,9 @@ module.exports = {
     default: `--publish-quiet --format-options '{"snippetInterface": "synchronous"}'`,
 }
 
-const { exec } = require('child_process');
-exec('yarn dev');
+// Para rodar teste no git lab devemos executar um servidor embarcado.
+// const { exec } = require('child_process');
+// exec('yarn dev');
 
 // Carregando módulos cucumber.
 let cucumber = require('@cucumber/cucumber');
@@ -34,7 +35,6 @@ const options = new Chrome.Options;
     options.addArguments('--disable-gpu');
     options.addArguments('--no-sandbox');
     options.addArguments('--disable-dev-shm-usage');
-    options.headless();
     // options.addArguments('--headless');
     // options.headless();
 
