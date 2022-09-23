@@ -28,8 +28,8 @@ Pages: https://ribaslucian.gitlab.io/react-ts_prova-cast
 ##### Enunciado:
 1. [ok] Crie um projeto React com template typescript.
 2. [ok] Versione o projeto no Gitlab do sebrae e crie a estrutura de desenvolvimento e branches baseadas no gitflow.
-3. Implemente uma tabela com duas linhas e duas colunas. Ela precisa ser responsiva e tableless.
-4. Crie uma chamada para o serviço http://viacep.com.br/ws/01001000/json/ utilizando a biblioteca AXIOS e disponibilize o resultadoi da chamada em uma tela.
+3. [ok] Implemente uma tabela com duas linhas e duas colunas. Ela precisa ser responsiva e tableless.
+4. [ok] Crie uma chamada para o serviço http://viacep.com.br/ws/01001000/json/ utilizando a biblioteca AXIOS e disponibilize o resultadoi da chamada em uma tela.
 5. Desenvolva um CRUD utilizando o JSON "Conta". O JSON precisa ter apenas os atributos: nome e descrição. Os dados podem ser mantidos no browser.
 6. Crie um teste utilizando a metodologia de BDD para o método POST do CRUD.
 7. Implemente um cenário para testar a chamada da API http://viacep.com.br/ws/01001000/json/.

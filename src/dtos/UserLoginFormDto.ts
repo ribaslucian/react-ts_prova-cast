@@ -1,4 +1,4 @@
-export type UserFormLogin = {
+export type UserFormLoginDto = {
     email: string,
     password: string
 }
