@@ -7,13 +7,17 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useForm } from "react-hook-form";
 import { ViacepFindDto } from '../dtos/ViacepFindDto';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ViacepFindedDto } from '../dtos/Viacep/ViacepFindedDto';
 import { ViacepService } from '../services/ViacepService';
 import { Alert } from '@mui/material';
 
 const theme = createTheme();
 export default function ViacepFindPage() {
+
+    useEffect(() => {
+        document.title = 'Viacep';
+    });
 
     const [showResults, setShowResults] = useState<boolean>(false);
     const [viacepFindedDto, setViacepFindedDto] = useState<ViacepFindedDto>({});
