@@ -1,0 +1,53 @@
+image: ribaslucian/rl-npm:latest
+
+
+variables:
+  BASE_URL: https://ribaslucian.gitlab.io/react-ts_prova-cast/
+  # SA_PASSWORD: $SA_PASSWORD
+
+
+stages:
+  - test
+  - build
+  - deploy
+
+
+before_script:
+  - npm install
+  
+  
+test-cucumber-bdd:
+  stage: test
+  script:
+    - npm test
+  # only:
+  #   - dev
+
+
+build:
+  stage: build
+  script:
+    - yarn build
+  only:
+    - release
+
+
+deploy:
+  stage: deploy
+  script:
+    - echo 'deploy - push to main.'
+  only:
+    - release
+
+
+pages:
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public/**/*
+  # rules:
+  #   # This ensures that only pushes to the default branch will trigger
+  #   # a pages deploy
+  #   - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
