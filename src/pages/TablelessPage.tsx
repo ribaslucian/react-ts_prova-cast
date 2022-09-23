@@ -62,7 +62,7 @@ const rows = [
     { id: 2, lastName: 'Valor 02', firstName: 'Cersei'},
 ];
 
-export default function DataGridDemo() {
+export default function TablelessPage() {
     return (
         <Box sx={{ height: 300 }}>
             <DataGrid
