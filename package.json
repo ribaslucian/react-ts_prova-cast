@@ -12,7 +12,8 @@
     "build": "vite build --base=https://ribaslucian.gitlab.io/react-ts_prova-cast/",
     "build_local": "vite build",
     "preview": "vite preview --port 5173",
-    "test": "cucumber-js --exit"
+    "test": "cucumber-js --exit",
+    "server": "json-server --watch db.json"
   },
   "dependencies": {
     "@cucumber/cucumber": "^8.6.0",
@@ -20,6 +21,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.6",
+    "@mui/x-data-grid": "^5.17.4",
     "@sitespeed.io/chromedriver": "^105.0.5195-19",
     "axios": "^0.27.2",
     "react": "^18.2.0",

@@ -1,0 +1,9 @@
+{
+  "contas": [
+    {
+      "id": 1,
+      "nome": "Conta Exemplo",
+      "descricao": "Descrição Exemplo"
+    }
+  ]
+}
