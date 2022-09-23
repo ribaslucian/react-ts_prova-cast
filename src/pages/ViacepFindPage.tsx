@@ -8,8 +8,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useForm } from "react-hook-form";
 import { ViacepFindDto } from '../dtos/ViacepFindDto';
 import { useState } from 'react';
-import { ViacepFindedDto } from '../dtos/ViacepFindedDto';
+import { ViacepFindedDto } from '../dtos/Viacep/ViacepFindedDto';
 import { ViacepService } from '../services/ViacepService';
+import { Alert } from '@mui/material';
 
 const theme = createTheme();
 export default function ViacepFindPage() {
@@ -22,11 +23,16 @@ export default function ViacepFindPage() {
     });
     const errors = formState.errors;
 
+
+    const [messageCepSearched, setMessageCepSearched] = useState<{}>();
     const onSubmit = handleSubmit(viaCepFindDto => {
         ViacepService.search(viaCepFindDto).then(response => {
             console.log(response.data);
             setShowResults(true);
             setViacepFindedDto(response.data);
+            setMessageCepSearched({
+                message: 'Cep buscado com sucesso.'
+            });
         }, err => {
             setShowResults(false);
             console.log(err);
@@ -78,7 +84,7 @@ export default function ViacepFindPage() {
                         />
 
                         <Button
-                            id="LoginButton"
+                            id="FindCepButton"
                             type="submit"
                             fullWidth
                             variant="contained"
@@ -92,6 +98,16 @@ export default function ViacepFindPage() {
                             Buscar dados da região
                         </Button>
                     </Box>
+
+                    <br />
+
+                    {messageCepSearched && (
+                        <Alert id="messageCepSearched" severity="success">
+                            {messageCepSearched.message}
+                        </Alert>
+                    )}
+
+                    <br />
 
                     {showResults && (
                         <div>

@@ -12,7 +12,8 @@
     "build": "vite build --base=https://ribaslucian.gitlab.io/react-ts_prova-cast/",
     "build_local": "vite build",
     "preview": "vite preview --port 5173",
-    "test": "cucumber-js --exit"
+    "test": "cucumber-js --exit",
+    "server": "json-server --watch db.json"
   },
   "dependencies": {
     "@cucumber/cucumber": "^8.6.0",
