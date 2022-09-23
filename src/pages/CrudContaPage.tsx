@@ -1,13 +1,17 @@
 import { Alert, Box, Button, Container, createTheme, CssBaseline, TextField, ThemeProvider, Typography } from '@mui/material';
 import { green } from '@mui/material/colors';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ContaDto } from '../dtos/ContaDto';
 import { ContasService } from '../services/ContasService';
 
 const theme = createTheme();
 export default function CrudContaPage() {
+
+    useEffect(() => {
+        document.title = 'CRUD Conta';
+    });
 
     const { register, setValue, handleSubmit, formState } = useForm<ContaDto>({ mode: "onChange" });
     const errors = formState.errors
