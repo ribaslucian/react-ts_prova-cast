@@ -2,6 +2,7 @@
 
 ##### 1. Construir imagem a partir do dockerfile.:
 `docker build -f 'dockerfile' -t 'ribaslucian/rl-npm:latest' .`
+Essa imagem possui NPM, YARN, Google Chrome e Selenium instalado e pronto para rodar BDD.
 
 ##### 2. Criar container para executar ou testar a aplicação:
 A Imagem está no docker.hub, então pode utilizar a buildada ou a pública: ribaslucian/rl-npm:latest.
@@ -16,6 +17,7 @@ OBS: Para rodar os testes é necessário ajustar o paramêtro --test no package.
 
 ##### 3. Entrar no container da aplicação e rodar:
 Lembre de apagar node_modules baixados por outros sistemas operacionais.
+
 `docker exec -it rl-npm_app bash`
 `npm install`
 `yarn dev`
