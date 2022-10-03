@@ -7,10 +7,10 @@ Essa imagem possui NPM, YARN, Google Chrome e Selenium instalado e pronto para r
 ##### 2. Criar container para executar ou testar a aplicação:
 A Imagem está no docker.hub, então pode utilizar a buildada ou a pública: ribaslucian/rl-npm:latest.
 <pre><code>docker run -d -it `
-    --name rl-npm_app `
-    -h rl-npm_app `
+    --name rl-npm_apps `
+    -h rl-npm_apps `
     -p 5173:5173 `
-    -v "C:/Projects Dev/ReactJS/react-ts_prova-cast:/usr/src" `
+    -v "C:\Users\Lucian\Dev Projects\JavaScript:/usr/src" `
     -w /usr/src `
     ribaslucian/rl-npm:latest</code></pre>
 OBS: Para rodar os testes é necessário ajustar o paramêtro --test no package.json.
